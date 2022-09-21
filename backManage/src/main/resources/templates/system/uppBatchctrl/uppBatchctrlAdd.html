@@ -1,0 +1,116 @@
+<div class="modal fade" id="uppBatchctrl-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="uppBatchctrl-add-modal-title">添加通道项目打分信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="uppBatchctrl-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	机构编号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="bpDepartmentid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	模值：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="shardingKey" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	清算日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="bpCleardate" class="form-control">
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	步骤：
+					            </span>
+                                <div class="form-group">
+                                     <input type="text" name="bpPhase"  class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	状态：
+					            </span>
+                                <div class="form-group">
+                                   <!--  <input type="text" name="bpStatus" class="form-control"> -->
+                                	<select name="bpStatus" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="S">开启</option>
+										 <option value="E">关闭</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	修改时间：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="gmtModified" class="form-control">
+                                	  <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	卡对应借贷标识：
+					            </span>
+                                <div class="form-group">
+                                    <select name="cardType" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="1">借记卡</option>
+										 <option value="2">贷记卡</option>
+										 <option value="3">准贷记卡</option>
+										 <option value="4">预付费卡</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="uppBatchctrl-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/uppBatchctrl/uppBatchctrlAdd.js}"></script>

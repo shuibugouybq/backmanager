@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.AgencyMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.Agency">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="AGENCYNBR" jdbcType="VARCHAR" property="agencynbr" />
+    <result column="AGENCYNAME" jdbcType="VARCHAR" property="agencyname" />
+    <result column="AGENCYTELPHONE" jdbcType="VARCHAR" property="agencytelphone" />
+    <result column="AGENCYADDRESS" jdbcType="VARCHAR" property="agencyaddress" />
+    <result column="AGENCYMAIL" jdbcType="VARCHAR" property="agencymail" />
+    <result column="AGENCYSERVICEPHONE" jdbcType="VARCHAR" property="agencyservicephone" />
+    <result column="AGENCYLICENSEID" jdbcType="VARCHAR" property="agencylicenseid" />
+    <result column="AGENCYPORATIONNAME" jdbcType="VARCHAR" property="agencyporationname" />
+    <result column="AGENCYPORATIONPAPERTYP" jdbcType="VARCHAR" property="agencyporationpapertyp" />
+    <result column="AGENCYPORATIONPAPERNBR" jdbcType="VARCHAR" property="agencyporationpapernbr" />
+    <result column="AGENCYREMARK" jdbcType="VARCHAR" property="agencyremark" />
+    <result column="AGENCYSETTLEACCT" jdbcType="CHAR" property="agencysettleacct" />
+    <result column="AGENCYPROFITNBR" jdbcType="CHAR" property="agencyprofitnbr" />
+  </resultMap>
+</mapper>

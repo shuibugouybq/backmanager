@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="cusTransCount-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	账号：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="accNoTemp" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	起始日期：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="beginDate" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	结束日期：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="endDate" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="cusTransCountTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/cusTransCount/cusTransCount.js}"></script>

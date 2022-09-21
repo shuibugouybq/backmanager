@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.MobilenopaySignMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MobilenopaySign">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SIGN_ID" jdbcType="VARCHAR" property="signId" />
+    <result column="USER_MOBILE" jdbcType="VARCHAR" property="userMobile" />
+    <result column="SIGN_ACCT_TYPE" jdbcType="VARCHAR" property="signAcctType" />
+    <result column="SIGN_ACCT_NO" jdbcType="VARCHAR" property="signAcctNo" />
+    <result column="USER_CERT_TYPE" jdbcType="VARCHAR" property="userCertType" />
+    <result column="USER_CERT_NO" jdbcType="VARCHAR" property="userCertNo" />
+    <result column="USER_OPEN_DATE" jdbcType="TIMESTAMP" property="userOpenDate" />
+    <result column="USER_MODIFY_DATE" jdbcType="TIMESTAMP" property="userModifyDate" />
+    <result column="USER_CLOSE_DATE" jdbcType="TIMESTAMP" property="userCloseDate" />
+    <result column="USER_CERT_EFFECT_DATE" jdbcType="TIMESTAMP" property="userCertEffectDate" />
+    <result column="SIGN_STATUS" jdbcType="VARCHAR" property="signStatus" />
+    <result column="CVV2" jdbcType="VARCHAR" property="cvv2" />
+    <result column="VALIDATE_DATE" jdbcType="VARCHAR" property="validateDate" />
+    <result column="BANKFLAG" jdbcType="VARCHAR" property="bankflag" />
+    <result column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+  </resultMap>
+</mapper>

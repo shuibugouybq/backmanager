@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelCtrlDayFractionsMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelCtrlDayFractions">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <id column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+    <result column="CHANNEL_DATE_TIME" jdbcType="TIMESTAMP" property="channelDateTime" />
+    <result column="FRACTIONS" jdbcType="VARCHAR" property="fractions" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+  </resultMap>
+</mapper>

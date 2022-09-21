@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UTransJnlMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UTransJnl">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SEQ_NO" jdbcType="VARCHAR" property="seqNo" />
+    <id column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <id column="TRANS_DATE" jdbcType="TIMESTAMP" property="transDate" />
+    <result column="TRANS_TIME" jdbcType="TIMESTAMP" property="transTime" />
+    <result column="TRX_TP" jdbcType="VARCHAR" property="trxTp" />
+    <result column="BIZ_TP" jdbcType="VARCHAR" property="bizTp" />
+    <result column="TRX_ID" jdbcType="VARCHAR" property="trxId" />
+    <result column="TRX_DT_TM" jdbcType="TIMESTAMP" property="trxDtTm" />
+    <result column="TRX_DATE" jdbcType="TIMESTAMP" property="trxDate" />
+    <result column="SETTLMT_DT" jdbcType="TIMESTAMP" property="settlmtDt" />
+    <result column="RP_FLG" jdbcType="VARCHAR" property="rpFlg" />
+    <result column="CURRENCY" jdbcType="VARCHAR" property="currency" />
+    <result column="TRX_AMT" jdbcType="DECIMAL" property="trxAmt" />
+    <result column="RCVER_ACCT_ISSR_ID" jdbcType="VARCHAR" property="rcverAcctIssrId" />
+    <result column="RCVER_ACCT_ID" jdbcType="VARCHAR" property="rcverAcctId" />
+    <result column="RCVER_NM" jdbcType="VARCHAR" property="rcverNm" />
+    <result column="ID_TP" jdbcType="VARCHAR" property="idTp" />
+    <result column="ID_NO" jdbcType="VARCHAR" property="idNo" />
+    <result column="MOB_NO" jdbcType="VARCHAR" property="mobNo" />
+    <result column="ACCT_LVL" jdbcType="VARCHAR" property="acctLvl" />
+    <result column="ACCT_TYPE" jdbcType="VARCHAR" property="acctType" />
+    <result column="CHK_STAT" jdbcType="VARCHAR" property="chkStat" />
+    <result column="SMS_KEY" jdbcType="VARCHAR" property="smsKey" />
+    <result column="SGN_NO" jdbcType="VARCHAR" property="sgnNo" />
+    <result column="SYS_RTN_CD" jdbcType="VARCHAR" property="sysRtnCd" />
+    <result column="SYS_RTN_TM" jdbcType="TIMESTAMP" property="sysRtnTm" />
+    <result column="TRX_STATUS" jdbcType="VARCHAR" property="trxStatus" />
+    <result column="SDER_ISSR_ID" jdbcType="VARCHAR" property="sderIssrId" />
+    <result column="SDERACCT_ISSR_ID" jdbcType="VARCHAR" property="sderacctIssrId" />
+    <result column="ORI_TRX_ID" jdbcType="VARCHAR" property="oriTrxId" />
+    <result column="ORI_TRX_DATE" jdbcType="TIMESTAMP" property="oriTrxDate" />
+    <result column="CIF_NO" jdbcType="VARCHAR" property="cifNo" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+    <result column="SIGN_ID" jdbcType="VARCHAR" property="signId" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+    <result column="SYS_RTN_DESC" jdbcType="LONGVARCHAR" property="sysRtnDesc" />
+  </resultMap>
+</mapper>

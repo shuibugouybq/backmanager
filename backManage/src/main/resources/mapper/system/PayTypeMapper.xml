@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.PayTypeMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.PayType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PAYTYPCD" jdbcType="VARCHAR" property="paytypcd" />
+    <result column="DEPARTMENTNBR" jdbcType="VARCHAR" property="departmentnbr" />
+    <result column="PAYTYPDESC" jdbcType="VARCHAR" property="paytypdesc" />
+    <result column="DATELASTMAINT" jdbcType="TIMESTAMP" property="datelastmaint" />
+    <result column="ACCTYPCD" jdbcType="CHAR" property="acctypcd" />
+    <result column="ACCTKIND" jdbcType="VARCHAR" property="acctkind" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="STARTTIME" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="ENDTIME" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="STATUS" jdbcType="CHAR" property="status" />
+  </resultMap>
+</mapper>

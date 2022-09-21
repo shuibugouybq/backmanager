@@ -1,0 +1,59 @@
+<div data-th-include="system/channelLimitCtrl/channelLimitCtrlAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="channelLimitCtrl:add,channelLimitCtrl:delete,channelLimitCtrl:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#channelLimitCtrl-add" shiro:hasPermission="channelLimitCtrl:add">新增通道限额信息</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateChannelLimitCtrl()" shiro:hasPermission="channelLimitCtrl:update">修改通道限额信息</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteChannelLimitCtrls();" shiro:hasPermission="channelLimitCtrl:delete">删除通道限额信息</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="channelLimitCtrl-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	通道号：
+					            </span>
+                                    <div class="form-group">
+                                        <select class="form-control" name="channelId">
+                                        	<option value=""></option>
+											<option th:each="item : ${channelIdMap}" th:value=${item.key}>[[${item.value}]]</option>
+										</select>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	通道类型：
+					            </span>
+                                    <div class="form-group">
+                                        <select class="form-control" name="channelType">
+                                        	<option value=""></option>
+											<option th:each="item : ${channelTypeMap}" th:value=${item.key}>[[${item.value}]]</option>
+										</select>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="channelLimitCtrlTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/channelLimitCtrl/channelLimitCtrl.js}"></script>
+<script data-th-src="@{js/app/system/channelLimitCtrl/channelLimitCtrlEdit.js}"></script>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchProfitMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchProfit">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PROFIT_SEQNO" jdbcType="VARCHAR" property="profitSeqno" />
+    <id column="PROFIT_ORDER" jdbcType="DECIMAL" property="profitOrder" />
+    <result column="PROFIT_DEPTID" jdbcType="CHAR" property="profitDeptid" />
+    <result column="PROFIT_MODE" jdbcType="CHAR" property="profitMode" />
+    <result column="PROFIT_SCALE" jdbcType="VARCHAR" property="profitScale" />
+    <result column="GMT_MODIFIED" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="GMT_CREATE" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="PROFIT_ACCTNO" jdbcType="VARCHAR" property="profitAcctno" />
+    <result column="PROFIT_ACCTNO_TYPE" jdbcType="VARCHAR" property="profitAcctnoType" />
+    <result column="PROFIT_ACCTNO_NAME" jdbcType="VARCHAR" property="profitAcctnoName" />
+    <result column="IS_LAST" jdbcType="DECIMAL" property="isLast" />
+    <result column="CORPORATION_CODE" jdbcType="CHAR" property="corporationCode" />
+    <result column="DEPT_ID" jdbcType="VARCHAR" property="deptId" />
+  </resultMap>
+</mapper>

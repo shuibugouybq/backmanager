@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchHostTransMapper">
+   <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchHostTrans">
+    <result column="TRANS_SEQNO" jdbcType="VARCHAR" property="transSeqno" />
+    <result column="TRANS_PAYACCTNO" jdbcType="VARCHAR" property="transPayAcctNo" />
+    <result column="TRANS_RCVACCTNO" jdbcType="VARCHAR" property="transRcvAcctNo" />
+    <result column="TRANS_AMT" jdbcType="VARCHAR" property="transAmt" />
+    <result column="TRANS_CHECKSTATUS" jdbcType="VARCHAR" property="transCheckStatus" />
+    <result column="DEPARTMENT_ID" jdbcType="VARCHAR" property="departmentId" />
+    <result column="TRANS_HOSTSEQNO" jdbcType="VARCHAR" property="transHostSeqno" />
+    <result column="TRANS_HOSTDATE" jdbcType="VARCHAR" property="transHostDate" />
+    <result column="TRANS_STATUS" jdbcType="VARCHAR" property="transStatus" />
+    <result column="TRANS_FEEAMT" jdbcType="VARCHAR" property="transFeeAmt" />
+  </resultMap>
+  
+  <select id="listQuery" resultMap="BaseResultMap" parameterType="UppBatchHostTrans">
+  	select TRANS_SEQNO,TRANS_PAYACCTNO,TRANS_RCVACCTNO,TRANS_AMT,TRANS_CHECKSTATUS, DEPARTMENT_ID,TRANS_HOSTSEQNO,TRANS_HOSTDATE,TRANS_STATUS,TRANS_FEEAMT from upp_batch_ht_host_trans WHERE 1=1
+	<if test="transSeqno != null and transSeqno != ''"> AND TRANS_SEQNO=#{transSeqno, jdbcType=VARCHAR}</if>
+	<if test="transPayAcctNo != null and transPayAcctNo != ''"> AND TRANS_PAYACCTNO=#{transPayAcctNo, jdbcType=VARCHAR}</if>
+	<if test="transRcvAcctNo != null and transRcvAcctNo != ''"> AND TRANS_RCVACCTNO=#{transRcvAcctNo, jdbcType=VARCHAR}</if>
+	<if test="transHostDate != null and transHostDate != ''"> AND TRANS_HOSTDATE=#{transHostDate, jdbcType=VARCHAR}</if>
+	<if test="transStatus != null and transStatus != ''"> AND TRANS_STATUS=#{transStatus, jdbcType=VARCHAR}</if>
+	union all 
+	select TRANS_SEQNO,TRANS_PAYACCTNO,TRANS_RCVACCTNO,TRANS_AMT,TRANS_CHECKSTATUS, DEPARTMENT_ID,TRANS_HOSTSEQNO,TRANS_HOSTDATE,TRANS_STATUS,TRANS_FEEAMT from upp_batch_host_trans WHERE 1=1
+  	<if test="transSeqno != null and transSeqno != ''"> AND TRANS_SEQNO=#{transSeqno, jdbcType=VARCHAR}</if>
+	<if test="transPayAcctNo != null and transPayAcctNo != ''"> AND TRANS_PAYACCTNO=#{transPayAcctNo, jdbcType=VARCHAR}</if>
+	<if test="transRcvAcctNo != null and transRcvAcctNo != ''"> AND TRANS_RCVACCTNO=#{transRcvAcctNo, jdbcType=VARCHAR}</if>
+	<if test="transHostDate != null and transHostDate != ''"> AND TRANS_HOSTDATE=#{transHostDate, jdbcType=VARCHAR}</if>
+	<if test="transStatus != null and transStatus != ''"> AND TRANS_STATUS=#{transStatus, jdbcType=VARCHAR}</if>
+  </select>
+  
+  
+</mapper>

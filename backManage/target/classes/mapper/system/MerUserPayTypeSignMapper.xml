@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.MerUserPayTypeSignMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MerUserPayTypeSign">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SIGNNBR" jdbcType="VARCHAR" property="signnbr" />
+    <id column="SIGNTYPCD" jdbcType="CHAR" property="signtypcd" />
+    <result column="SIGNCODE" jdbcType="CHAR" property="signcode" />
+    <result column="MERPLATFORMCD" jdbcType="VARCHAR" property="merplatformcd" />
+    <result column="USERNBR" jdbcType="VARCHAR" property="usernbr" />
+    <result column="MERCUSTNBR" jdbcType="CHAR" property="mercustnbr" />
+    <result column="USERACCTNBR" jdbcType="VARCHAR" property="useracctnbr" />
+    <result column="ACCTKINDCD" jdbcType="CHAR" property="acctkindcd" />
+    <result column="PAYTYPCD" jdbcType="CHAR" property="paytypcd" />
+    <result column="SIGNDATE" jdbcType="DATE" property="signdate" />
+    <result column="SIGNEFFDATE" jdbcType="DATE" property="signeffdate" />
+    <result column="SIGNINACTIVEDATE" jdbcType="DATE" property="signinactivedate" />
+    <result column="SIGNTHIRDACCTNBR" jdbcType="VARCHAR" property="signthirdacctnbr" />
+    <result column="CHECKDATE" jdbcType="DATE" property="checkdate" />
+    <result column="DATELASTMAINT" jdbcType="TIMESTAMP" property="datelastmaint" />
+    <result column="SIGNMOBILE" jdbcType="VARCHAR" property="signmobile" />
+    <result column="SIGNSTATUS" jdbcType="VARCHAR" property="signstatus" />
+    <result column="TELLERNBR" jdbcType="VARCHAR" property="tellernbr" />
+    <result column="MEMO" jdbcType="VARCHAR" property="memo" />
+  </resultMap>
+</mapper>

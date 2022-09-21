@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.DeptAcctInfoMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.DeptAcctInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="DEPTNBR" jdbcType="VARCHAR" property="deptnbr" />
+    <id column="INNERACCTCFMMODE" jdbcType="VARCHAR" property="inneracctcfmmode" />
+    <result column="ACCTNBR" jdbcType="VARCHAR" property="acctnbr" />
+    <result column="ACCTNAME" jdbcType="VARCHAR" property="acctname" />
+    <result column="ACCTKINDCD" jdbcType="CHAR" property="acctkindcd" />
+    <result column="ACCTTYPCD" jdbcType="CHAR" property="accttypcd" />
+    <result column="ACCTDEPTNBR" jdbcType="VARCHAR" property="acctdeptnbr" />
+    <result column="ACCTBANKNBR" jdbcType="VARCHAR" property="acctbanknbr" />
+    <result column="FEEACCTNBR" jdbcType="VARCHAR" property="feeacctnbr" />
+    <result column="FEEACCTKIND" jdbcType="CHAR" property="feeacctkind" />
+    <result column="FEEACCTTPYCD" jdbcType="CHAR" property="feeaccttpycd" />
+    <result column="FEEACCTNAME" jdbcType="VARCHAR" property="feeacctname" />
+    <result column="VIRTUALTELLERNBR" jdbcType="VARCHAR" property="virtualtellernbr" />
+    <result column="ACCTYESTERDAYBAL" jdbcType="DECIMAL" property="acctyesterdaybal" />
+    <result column="ACCTDAYBAL" jdbcType="DECIMAL" property="acctdaybal" />
+    <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+    <result column="OPERATEDATE" jdbcType="DATE" property="operatedate" />
+    <result column="TELLERDEPTNBR" jdbcType="VARCHAR" property="tellerdeptnbr" />
+    <result column="POINTREACCTDEPTNBR" jdbcType="VARCHAR" property="pointreacctdeptnbr" />
+    <result column="FEESPENDACCTNBR" jdbcType="VARCHAR" property="feespendacctnbr" />
+    <result column="FEESPENDACCTNAME" jdbcType="VARCHAR" property="feespendacctname" />
+    <result column="FEESPENDACCTKIND" jdbcType="CHAR" property="feespendacctkind" />
+    <result column="FEESPENDACCTTPYCD" jdbcType="CHAR" property="feespendaccttpycd" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UserTransctrlMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UserTransctrl">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="USER_ACCT_NO" jdbcType="VARCHAR" property="userAcctNo" />
+    <id column="TRANS_ID" jdbcType="VARCHAR" property="transId" />
+    <result column="USER_CIF_NO" jdbcType="VARCHAR" property="userCifNo" />
+    <result column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <result column="USERTC_PER_TRANS_LIMIT" jdbcType="DECIMAL" property="usertcPerTransLimit" />
+    <result column="USERTC_PER_DAY_LITMIT" jdbcType="DECIMAL" property="usertcPerDayLitmit" />
+    <result column="USERTC_DAY_AMT" jdbcType="DECIMAL" property="usertcDayAmt" />
+    <result column="USERTC_DAY_AMT_DATE" jdbcType="TIMESTAMP" property="usertcDayAmtDate" />
+    <result column="USERTC_PER_MONTH_LIMIT" jdbcType="DECIMAL" property="usertcPerMonthLimit" />
+    <result column="USERTC_MONTH_AMT" jdbcType="DECIMAL" property="usertcMonthAmt" />
+    <result column="USERTC_MONTH_AMT_DATE" jdbcType="VARCHAR" property="usertcMonthAmtDate" />
+    <result column="USERTC_PER_YEAR_LIMIT" jdbcType="DECIMAL" property="usertcPerYearLimit" />
+    <result column="USERTC_YEAR_AMT" jdbcType="DECIMAL" property="usertcYearAmt" />
+    <result column="USERTC_YEAR_AMT_DATE" jdbcType="VARCHAR" property="usertcYearAmtDate" />
+    <result column="USERTC_OPEN_DATE" jdbcType="DATE" property="usertcOpenDate" />
+    <result column="USERTC_MODIFY_DATE" jdbcType="DATE" property="usertcModifyDate" />
+    <result column="USERTC_CLOSE_DATE" jdbcType="DATE" property="usertcCloseDate" />
+    <result column="USERTC_OPEN_USER" jdbcType="VARCHAR" property="usertcOpenUser" />
+    <result column="USERTC_MODIFY_USER" jdbcType="VARCHAR" property="usertcModifyUser" />
+    <result column="USERTC_CLOSE_USER" jdbcType="VARCHAR" property="usertcCloseUser" />
+  </resultMap>
+</mapper>

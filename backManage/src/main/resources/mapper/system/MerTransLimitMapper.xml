@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.MerTransLimitMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MerTransLimit">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MERNBR" jdbcType="VARCHAR" property="mernbr" />
+    <id column="TRANSTYPCD" jdbcType="VARCHAR" property="transtypcd" />
+    <id column="PAYTYPCD" jdbcType="CHAR" property="paytypcd" />
+    <id column="CARDTYPCD" jdbcType="CHAR" property="cardtypcd" />
+    <id column="CHANNELNBR" jdbcType="VARCHAR" property="channelnbr" />
+    <result column="PERTRANSLIMIT" jdbcType="DECIMAL" property="pertranslimit" />
+    <result column="STATUS" jdbcType="CHAR" property="status" />
+    <result column="OPENDATE" jdbcType="DATE" property="opendate" />
+    <result column="OPENUSERNBR" jdbcType="VARCHAR" property="openusernbr" />
+    <result column="CLOSEDATE" jdbcType="DATE" property="closedate" />
+    <result column="CLOSEUSERNBR" jdbcType="VARCHAR" property="closeusernbr" />
+    <result column="MODIFYUSER" jdbcType="DATE" property="modifyuser" />
+    <result column="DATELASTMAINT" jdbcType="TIMESTAMP" property="datelastmaint" />
+  </resultMap>
+</mapper>

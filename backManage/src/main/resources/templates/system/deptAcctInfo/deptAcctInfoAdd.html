@@ -1,0 +1,109 @@
+<div class="modal fade" id="deptAcctInfo-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="deptAcctInfo-add-modal-title">添加机构账户信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="deptAcctInfo-add-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">机构编号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="deptnbr" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">柜员所属机构号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="tellerdeptnbr" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">商户类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="inneracctcfmmode" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctnbr" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户名称：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctname" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户性质：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctkindcd" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">手续费账号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="feeacctnbr" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">手续费账户性质：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="feeacctkind" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">手续费账号名称：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="feeacctname" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">虚拟柜员号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="virtualtellernbr" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="deptAcctInfo-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/deptAcctInfo/deptAcctInfoAdd.js}"></script>

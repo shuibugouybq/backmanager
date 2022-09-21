@@ -1,0 +1,150 @@
+<div class="modal fade" id="fractions-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg"><!-- cardbin-add -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="channelItemScore-add-modal-title">添加通道项目打分信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="channelItemScore-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	通道号：
+					            </span>
+                                <div class="form-group">
+                                    <select class="form-control" name="channelId">
+										<option th:each="item : ${channelIdMap}" th:value=${item.key}>[[${item.value}]]</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	通道业务：
+					            </span>
+                                <div class="form-group">
+                                    <select class="form-control" name="channelType">
+										<option th:each="item : ${channelTypeMap}" th:value=${item.key}>[[${item.value}]]</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	通道时间：
+					            </span>
+                                <div class="form-group">
+                                     <input type="text" name="channelDateTime"  class="form-control">
+                                        <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	通道得分：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="fractions" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	预留1：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark1" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	预留2：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark2" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	预留3：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark3" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	预留4：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark4" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	预留5：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark5" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	卡对应借贷标识：
+					            </span>
+                                <div class="form-group">
+                                    <select name="cardType" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="1">借记卡</option>
+										 <option value="2">贷记卡</option>
+										 <option value="3">准贷记卡</option>
+										 <option value="4">预付费卡</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="cardbin-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/channelLimitFractions/channelLimitFractionsAdd.js}"></script>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchBussettingMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchBussetting">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="BUS_DEPARTMENTID" jdbcType="VARCHAR" property="busDepartmentid" />
+    <id column="SHARDING_KEY" jdbcType="DECIMAL" property="shardingKey" />
+    <result column="BUS_PRECLEARDATE" jdbcType="TIMESTAMP" property="busPrecleardate" />
+    <result column="BUS_CLEARDATE" jdbcType="TIMESTAMP" property="busCleardate" />
+    <result column="GMT_CREATE" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="GMT_MODIFIED" jdbcType="TIMESTAMP" property="gmtModified" />
+  </resultMap>
+</mapper>

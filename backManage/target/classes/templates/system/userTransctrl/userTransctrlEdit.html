@@ -1,0 +1,91 @@
+<div class="modal fade" id="userTransctrl-edit" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="userTransctrl-edit-modal-title">修改用户交易限额</h3>
+            </div>
+            <div class="modal-body">
+                <form id="userTransctrl-edit-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userAcctNo" readOnly/>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">交易码：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="transId" readOnly/>
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">客户号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userCifNo" readOnly/>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">渠道号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="channelId" readOnly/>
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">单笔限额：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="usertcPerTransLimit" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">单日限额：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="usertcPerDayLitmit" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">单月限额：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="usertcPerMonthLimit" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">年交易限额：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="usertcPerYearLimit" />
+								</div>
+							</div>
+						</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="userTransctrl-edit-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/userTransctrl/userTransctrlEdit.js}"></script>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ParamMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.Param">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="VERSION" jdbcType="VARCHAR" property="version" />
+    <result column="SOFT_DELETE" jdbcType="VARCHAR" property="softDelete" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="PARENT_PARMA_ID" jdbcType="VARCHAR" property="parentParmaId" />
+    <result column="PARAM_TYPE" jdbcType="VARCHAR" property="paramType" />
+    <result column="PARAM_ID" jdbcType="VARCHAR" property="paramId" />
+    <result column="PARAM_VALUE" jdbcType="LONGVARCHAR" property="paramValue" />
+    <result column="PARAM_NAME" jdbcType="LONGVARCHAR" property="paramName" />
+  </resultMap>
+</mapper>

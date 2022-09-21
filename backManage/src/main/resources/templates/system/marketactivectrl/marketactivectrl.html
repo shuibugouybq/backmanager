@@ -1,0 +1,65 @@
+<div data-th-include="system/marketactivectrl/marketactivectrlAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="marketactivectrl:add,marketactivectrl:delete,marketactivectrl:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#marketactivectrl-add" shiro:hasPermission="marketactivectrl:add">新增营销控制信息</a>
+                            <!-- <a href="javascript:void(0)" class="dropdown-item" onclick="updateMarketactivectrl()" shiro:hasPermission="marketactivectrl:update">修改营销控制信息</a> -->
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteMarketactivectrls();" shiro:hasPermission="marketactivectrl:delete">删除营销控制信息</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="marketactivectrl-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	营销活动ID：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="marketActiveID" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	用户卡类型：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="userCardTypCd" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	支付产品：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="payProduct" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="marketactivectrlTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/marketactivectrl/marketactivectrl.js}"></script>
+<script data-th-src="@{js/app/system/marketactivectrl/marketactivectrlEdit.js}"></script>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelPayTypeMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelPayType">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <result column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+    <result column="CHANNEL_NAME" jdbcType="VARCHAR" property="channelName" />
+    <result column="CHANNEL_BEGIN_TIME" jdbcType="TIMESTAMP" property="channelBeginTime" />
+    <result column="CHANNEL_END_TIME" jdbcType="TIMESTAMP" property="channelEndTime" />
+    <result column="CARD_TYPE" jdbcType="VARCHAR" property="cardType" />
+    <result column="AREA" jdbcType="VARCHAR" property="area" />
+    <result column="PRIORITY" jdbcType="CHAR" property="priority" />
+    <result column="BANK_LIST" jdbcType="LONGVARCHAR" property="bankList" />
+  </resultMap>
+</mapper>

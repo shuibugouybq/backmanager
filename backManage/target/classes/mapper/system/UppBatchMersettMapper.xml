@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchMersettMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchMersett">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="TRANS_SETTSEQNO" jdbcType="VARCHAR" property="transSettseqno" />
+    <id column="SHARDING_KEY" jdbcType="DECIMAL" property="shardingKey" />
+    <result column="TRANS_CLEARDATE" jdbcType="TIMESTAMP" property="transCleardate" />
+    <result column="TRANS_SETTDATE" jdbcType="TIMESTAMP" property="transSettdate" />
+    <result column="TRANS_DATE" jdbcType="TIMESTAMP" property="transDate" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="TRANS_PAYACCTNO" jdbcType="VARCHAR" property="transPayacctno" />
+    <result column="TRANS_PAYACCTNAME" jdbcType="VARCHAR" property="transPayacctname" />
+    <result column="TRANS_RCVACCTNO" jdbcType="VARCHAR" property="transRcvacctno" />
+    <result column="TRANS_RCVACCTNAME" jdbcType="VARCHAR" property="transRcvacctname" />
+    <result column="TRANS_AMT" jdbcType="DECIMAL" property="transAmt" />
+    <result column="TRANS_SETT_STATUS" jdbcType="VARCHAR" property="transSettStatus" />
+    <result column="TRANS_SEQUENCE" jdbcType="DECIMAL" property="transSequence" />
+    <result column="TRANS_SEND_DEPARTMENTID" jdbcType="VARCHAR" property="transSendDepartmentid" />
+    <result column="CORPORATION_DEPTID" jdbcType="VARCHAR" property="corporationDeptid" />
+    <result column="CORPORATION_CODE" jdbcType="CHAR" property="corporationCode" />
+    <result column="TRANS_MERACCTTYPE" jdbcType="CHAR" property="transMeraccttype" />
+    <result column="IS_BALANCE" jdbcType="DECIMAL" property="isBalance" />
+    <result column="GMT_MODIFIED" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="GMT_CREATE" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="TRANS_PAYACCTNO_TYPE" jdbcType="VARCHAR" property="transPayacctnoType" />
+    <result column="TRANS_RCVACCTNO_TYPE" jdbcType="VARCHAR" property="transRcvacctnoType" />
+    <result column="TRANS_BRIEFCODE" jdbcType="VARCHAR" property="transBriefcode" />
+  </resultMap>
+  
+  <select id="transQuery" resultMap="BaseResultMap" parameterType="UppBatchMersett">
+  	select t.* from (
+  		select * from upp_batch_mersett 
+			union all 
+		select * from upp_batch_ht_mersett
+  	)t where 1=1 
+  	<if test="merId != null and merId != ''"> AND MER_ID=#{merId, jdbcType=VARCHAR}</if>
+  	<if test="beginDate != null and beginDate !='' "> and LEFT(TRANS_CLEARDATE, 10) &gt;= #{beginDate}</if>
+	<if test="endDate != null and endDate !='' "> and LEFT(TRANS_CLEARDATE, 10) &lt;=#{endDate}</if>
+  </select>
+  
+</mapper>

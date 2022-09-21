@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.CustomerSignMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.CustomerSign">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <id column="SIGN_ID" jdbcType="VARCHAR" property="signId" />
+    <id column="SIGN_ACCT_NO" jdbcType="VARCHAR" property="signAcctNo" />
+    <result column="TOKEN" jdbcType="VARCHAR" property="token" />
+    <result column="CUST_ACCT_NO" jdbcType="VARCHAR" property="custAcctNo" />
+    <result column="ACCT_LEVEL" jdbcType="VARCHAR" property="acctLevel" />
+    <result column="ACCT_TYPE" jdbcType="VARCHAR" property="acctType" />
+    <result column="ACCT_CHECK_STATUS" jdbcType="VARCHAR" property="acctCheckStatus" />
+    <result column="SIGN_ACCT_NAME" jdbcType="VARCHAR" property="signAcctName" />
+    <result column="SIGN_ACCT_TYPE" jdbcType="VARCHAR" property="signAcctType" />
+    <result column="SIGN_ACCT_LEVEL" jdbcType="VARCHAR" property="signAcctLevel" />
+    <result column="USER_MOBILE" jdbcType="VARCHAR" property="userMobile" />
+    <result column="USER_CERT_NO" jdbcType="VARCHAR" property="userCertNo" />
+    <result column="USER_CERT_TYPE" jdbcType="VARCHAR" property="userCertType" />
+    <result column="USER_CERT_EFFECT_DATE" jdbcType="TIMESTAMP" property="userCertEffectDate" />
+    <result column="VALIDATE_DATE" jdbcType="VARCHAR" property="validateDate" />
+    <result column="CVV2" jdbcType="VARCHAR" property="cvv2" />
+    <result column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+    <result column="SIGN_CHANNEL_ID" jdbcType="VARCHAR" property="signChannelId" />
+    <result column="MER_USER_ID" jdbcType="VARCHAR" property="merUserId" />
+    <result column="SIGN_DATE" jdbcType="TIMESTAMP" property="signDate" />
+    <result column="MODIFY_DATE" jdbcType="TIMESTAMP" property="modifyDate" />
+    <result column="UNSIGN_DATE" jdbcType="TIMESTAMP" property="unsignDate" />
+    <result column="SIGN_STATUS" jdbcType="VARCHAR" property="signStatus" />
+    <result column="TRANS_CURRENCY" jdbcType="VARCHAR" property="transCurrency" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="DEPARTMENT_ID" jdbcType="VARCHAR" property="departmentId" />
+    <result column="BANK_NAME" jdbcType="VARCHAR" property="bankName" />
+    <result column="BRANCH_BANK_ID" jdbcType="VARCHAR" property="branchBankId" />
+    <result column="BRANCH_BANK_NAME" jdbcType="VARCHAR" property="branchBankName" />
+    <result column="BRANCH_CITY_NAME" jdbcType="VARCHAR" property="branchCityName" />
+    <result column="BANKFLAG" jdbcType="VARCHAR" property="bankflag" />
+    <result column="SMSKEY" jdbcType="VARCHAR" property="smskey" />
+    <result column="AUTH_MSG" jdbcType="VARCHAR" property="authMsg" />
+    <result column="MSG_SEND_DATETIME" jdbcType="TIMESTAMP" property="msgSendDatetime" />
+    <result column="MSG_SEND_TIMES" jdbcType="VARCHAR" property="msgSendTimes" />
+    <result column="SIGN_TYPE" jdbcType="VARCHAR" property="signType" />
+    <result column="VAL_BT_MP" jdbcType="VARCHAR" property="valBtMp" />
+    <result column="ORI_TRX_ID" jdbcType="VARCHAR" property="oriTrxId" />
+    <result column="IS_CHECKED" jdbcType="VARCHAR" property="isChecked" />
+  </resultMap>
+</mapper>

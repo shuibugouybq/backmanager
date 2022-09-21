@@ -1,0 +1,39 @@
+<div data-th-include="system/userBlackWhiteList/userBlackWhiteListAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="userBlackWhiteList:add,userBlackWhiteList:delete,userBlackWhiteList:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#userBlackWhiteList-add" shiro:hasPermission="userBlackWhiteList:add">新增</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteUserBlackWhiteLists();" shiro:hasPermission="userBlackWhiteList:delete">删除</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="userBlackWhiteList-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	卡号：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="cardno" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="userBlackWhiteListTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/userBlackWhiteList/userBlackWhiteList.js}"></script>

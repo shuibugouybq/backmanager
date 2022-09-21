@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchDepartmentMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchDepartment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="DEPARTMENT_ID" jdbcType="VARCHAR" property="departmentId" />
+    <result column="GMT_CREATE" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="GMT_MODIFIED" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="DEPARTMENT_NAME" jdbcType="VARCHAR" property="departmentName" />
+    <result column="DEPARTMENT_STATUS" jdbcType="CHAR" property="departmentStatus" />
+    <result column="DEPARTMENT_TYPE" jdbcType="CHAR" property="departmentType" />
+    <result column="DEPARTMENT_NEXTDATE" jdbcType="TIMESTAMP" property="departmentNextdate" />
+    <result column="DEPARTMENT_DATE" jdbcType="TIMESTAMP" property="departmentDate" />
+    <result column="SETT_23FLAG" jdbcType="DECIMAL" property="sett23flag" />
+    <result column="IS_SIGN" jdbcType="DECIMAL" property="isSign" />
+    <result column="TRANS_TYPE" jdbcType="VARCHAR" property="transType" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,90 @@
+<div data-th-include="system/marketingActivitiesRule/marketingActivitiesRuleAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="marketingActivitiesRule:add,marketingActivitiesRule:delete,marketingActivitiesRule:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#marketingActivitiesRule-add" shiro:hasPermission="marketingActivitiesRule:add">新增营销管理信息</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateMarketingActivitiesRule()" shiro:hasPermission="marketingActivitiesRule:update">修改营销管理信息</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteMarketingActivitiesRules();" shiro:hasPermission="marketingActivitiesRule:delete">删除营销管理信息</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="marketingActivitiesRule-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	营销活动ID：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="marketActiveID" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	商户号：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="merNBR" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	营销活动类型：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="marketActiveType" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	营销活动开始时间：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="marketActivesStartDate" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	营销活动结束时间：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="marketActivesEndDate" class="form-control"/>
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+                <table id="marketingActivitiesRuleTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/marketingActivitiesRule/marketingActivitiesRule.js}"></script>
+<script data-th-src="@{js/app/system/marketingActivitiesRule/marketingActivitiesRuleEdit.js}"></script>

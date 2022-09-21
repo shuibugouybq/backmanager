@@ -1,0 +1,311 @@
+<div class="modal fade" id="customerSign-edit" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="customerSign-edit-modal-title">修改签约信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="customerSign-edit-form">
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">商户号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="merId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约流水：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="signId" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约银行卡号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="signAcctNo" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户账号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="custAcctNo" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户等级：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctLevel" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户类型：</span>
+								<div class="form-group">
+									<select name="acctType" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="01">个人银行借记账户 </option>
+										 <option value="02">个人银行贷记账户</option>
+										 <option value="03">个人银行准贷记账户</option>
+										 <option value="05">银行预付费账户</option>
+										 <option value="10">个人支付账户</option>
+										 <option value="11">单位支付账户</option>
+										 <option value="20">对公银行账户</option>
+										 <option value="21">备付金账户</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">柜面核身状态：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctCheckStatus" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">token：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="token" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约账户名称：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="signAcctName" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约账户卡类型：</span>
+								<div class="form-group">
+									<select name="signAcctType" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="01">个人银行借记账户 </option>
+										 <option value="02">个人银行贷记账户</option>
+										 <option value="03">个人银行准贷记账户</option>
+										 <option value="05">银行预付费账户</option>
+										 <option value="10">个人支付账户</option>
+										 <option value="11">单位支付账户</option>
+										 <option value="20">对公银行账户</option>
+										 <option value="21">备付金账户</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约账户卡等级：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="signAcctLevel" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留手机号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userMobile" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">证件号码：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userCertNo" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">证件类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userCertType" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">证件有效期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="userCertEffectDate" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">有效期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="validateDate" />
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">cvv2：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="cvv2" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">银行号：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="bankId" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">发起方机构标识：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="signChannelId" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">客户号：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="merUserId" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">签约状态：</span>
+									<div class="form-group">
+										<select name="signStatus" class="form-control">
+											 <option value="">请选择</option>
+											 <option value="0">已签约 </option>
+											 <option value="1">已解约</option>
+											 <option value="2">预签约</option>
+											 <option value="3">初始状态</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">客户姓名：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="userName" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">机构号：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="departmentId" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">银行名称：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="bankName" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">支行id：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="branchBankId" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">支行名称：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="branchBankName" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">支行城市名称：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="branchCityName" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">银行标志：</span>
+									<div class="form-group">
+										<input type="text" class="form-control" name="bankflag" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<div class="input-group">
+									<span class="input-group-addon">签约类型：</span>
+									<div class="form-group">
+										<select name="signType" class="form-control">
+											 <option value="">请选择</option>
+											 <option value="00">协议支付 </option>
+											 <option value="22">借记转账</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+				</form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="customerSign-edit-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/customerSign/customerSignEdit.js}"></script>

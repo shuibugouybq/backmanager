@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.MerRefundRateMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MerRefundRate">
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="REFUND_RATE" jdbcType="VARCHAR" property="refundRate" />
+    <result column="REFUND_NUM" jdbcType="VARCHAR" property="refundNum" />
+  </resultMap>
+  
+  <select id="merRefundRateQuery" resultMap="BaseResultMap" parameterType="MerRefundRate">
+		SELECT
+			t.MER_ID,
+			t.MER_NAME,
+			sum(
+				CASE
+				WHEN t.trans_type = '01' THEN
+					1
+				ELSE
+					0
+				END
+			) / count(1) AS REFUND_RATE,
+			count(1) AS REFUND_NUM
+		FROM
+			(
+				SELECT
+					a.mer_id,
+					b.mer_name,
+					LEFT (a.TRANS_DATE_TIME, 10) time,
+					a.trans_type,
+					b.mer_type
+				FROM
+					ot_trans a,
+					ft_merchant b
+				WHERE
+					a.mer_id = b.mer_id
+				UNION ALL
+					SELECT
+						c.mer_id,
+						d.mer_name,
+						LEFT (c.TRANS_DATE_TIME, 10) time,
+						c.trans_type,
+						d.mer_type
+					FROM
+						ht_trans c,
+						ft_merchant d
+					WHERE
+						c.MER_ID = d.MER_ID
+			) t
+		where 1=1
+		<if test="merId != null and merId != ''"> AND t.MER_ID=#{merId, jdbcType=VARCHAR}</if>
+		<if test="merType != null and merType != ''"> AND t.MER_TYPE=#{merType, jdbcType=VARCHAR}</if>
+		<if test="beginDate != null and beginDate !='' "> and t.time &gt;= #{beginDate}</if>
+		<if test="endDate != null and endDate !='' "> and t.time &lt;=#{endDate}</if>
+		GROUP BY
+			t.mer_id
+  </select>
+  
+  
+</mapper>

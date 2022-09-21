@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.InnerDeptManageMapper">
+   <!-- <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MerRiskLevel">
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="MER_BUSINESSLICENSEID" jdbcType="VARCHAR" property="merBusinessLicenseId" />
+    <result column="MER_CORPORATIONNAME" jdbcType="VARCHAR" property="merCorporationName" />
+    <result column="MER_CORPORATIONPAPERID" jdbcType="VARCHAR" property="merCorporationPaperId" />
+    <result column="warndatetime" jdbcType="VARCHAR" property="warndatetime" />
+    <result column="warndealman" jdbcType="VARCHAR" property="warndealman" />
+    <result column="merdealresult" jdbcType="VARCHAR" property="merdealresult" />
+    <result column="rislevel" jdbcType="VARCHAR" property="rislevel" />
+  </resultMap> -->
+  
+  <insert id="insertInnerDept"  parameterType="InnerDeptManage">
+  insert into dept_info (deptnbr
+  	<if test="deptname != null and deptname != ''"> ,deptname </if>
+  	<if test="deptlevel != null and deptlevel != ''"> ,deptlevel </if>
+  	<if test="superdeptnbr != null and superdeptnbr != ''"> ,superdeptnbr </if>
+  	<if test="opendate != null and opendate != ''"> ,opendate </if>
+  	<if test="openusernbr != null and openusernbr != ''"> ,openusernbr </if>
+  	<if test="closedate != null and closedate != ''"> ,closedate </if>
+  	<if test="closeusernbr != null and closeusernbr != ''"> ,closeusernbr </if>
+  	<if test="modifydate != null and modifydate != ''"> ,modifydate </if>
+  	<if test="modifyusernbr != null and modifyusernbr != ''"> ,modifyusernbr </if>
+  	<if test="deptstatus != null and deptstatus != ''"> ,deptstatus </if>
+  	) values (#{deptnbr, jdbcType=VARCHAR}
+  	<if test="deptname != null and deptname != ''"> , #{deptname, jdbcType=VARCHAR}</if>
+  	<if test="deptlevel != null and deptlevel != ''"> , #{deptlevel, jdbcType=VARCHAR}</if>
+  	<if test="superdeptnbr != null and superdeptnbr != ''"> , #{superdeptnbr, jdbcType=VARCHAR}</if>
+  	<if test="opendate != null and opendate != ''"> , #{opendate, jdbcType=VARCHAR}</if>
+  	<if test="openusernbr != null and openusernbr != ''"> , #{openusernbr, jdbcType=VARCHAR}</if>
+  	<if test="closedate != null and closedate != ''"> , #{closedate, jdbcType=VARCHAR}</if>
+  	<if test="closeusernbr != null and closeusernbr != ''"> , #{closeusernbr, jdbcType=VARCHAR}</if>
+  	<if test="modifydate != null and modifydate != ''"> , #{modifydate, jdbcType=VARCHAR}</if>
+  	<if test="modifyusernbr != null and modifyusernbr != ''"> , #{modifyusernbr, jdbcType=VARCHAR}</if>
+  	<if test="deptstatus != null and deptstatus != ''"> , #{deptstatus, jdbcType=VARCHAR}</if>
+  	)
+  </insert>
+  
+  <update id="updateInnerDept"  parameterType="InnerDeptManage">
+  update dept_info set 
+  deptname=#{deptname, jdbcType=VARCHAR},
+  deptlevel=#{deptlevel, jdbcType=VARCHAR},
+  <if test="opendate != null and opendate != ''"> , opendate = #{opendate, jdbcType=VARCHAR}</if>
+  openusernbr=#{openusernbr, jdbcType=VARCHAR},
+  <if test="closedate != null and closedate != ''"> , closedate = #{closedate, jdbcType=VARCHAR}</if>
+  closeusernbr=#{closeusernbr, jdbcType=VARCHAR},
+  <if test="modifydate != null and modifydate != ''"> , modifydate = #{modifydate, jdbcType=VARCHAR}</if>
+  modifyusernbr=#{modifyusernbr, jdbcType=VARCHAR},
+  deptstatus=#{deptstatus, jdbcType=VARCHAR}
+  where
+  deptnbr=#{deptnbr, jdbcType=VARCHAR}
+  </update>
+  
+</mapper>

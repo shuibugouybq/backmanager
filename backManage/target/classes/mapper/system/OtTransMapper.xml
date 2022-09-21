@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.OtTransMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.OtTrans">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="TRANS_SEQ_NO" jdbcType="VARCHAR" property="transSeqNo" />
+    <id column="TRANS_DATE" jdbcType="TIMESTAMP" property="transDate" />
+    <result column="TRANS_DATE_TIME" jdbcType="TIMESTAMP" property="transDateTime" />
+    <result column="TRANS_FINISH_TIME" jdbcType="TIMESTAMP" property="transFinishTime" />
+    <result column="TRANS_MER_SEQ_NO" jdbcType="VARCHAR" property="transMerSeqNo" />
+    <result column="TRANS_MER_DATE" jdbcType="TIMESTAMP" property="transMerDate" />
+    <result column="TRANS_MER_DATE_TIME" jdbcType="TIMESTAMP" property="transMerDateTime" />
+    <result column="USER_ACCT_NO" jdbcType="VARCHAR" property="userAcctNo" />
+    <result column="USER_ACCT_TYPE" jdbcType="VARCHAR" property="userAcctType" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="USER_CERT_ID" jdbcType="VARCHAR" property="userCertId" />
+    <result column="USER_CERT_TYPE" jdbcType="VARCHAR" property="userCertType" />
+    <result column="USER_MOBILE" jdbcType="VARCHAR" property="userMobile" />
+    <result column="TRANS_RCV_ACCT_NO" jdbcType="VARCHAR" property="transRcvAcctNo" />
+    <result column="TRANS_RCV_ACCT_TYPE" jdbcType="VARCHAR" property="transRcvAcctType" />
+    <result column="TRANS_RCV_ACCT_NAME" jdbcType="VARCHAR" property="transRcvAcctName" />
+    <result column="TRANS_RCV_BANK_ID" jdbcType="VARCHAR" property="transRcvBankId" />
+    <result column="TRANS_RCV_BANK_NAME" jdbcType="VARCHAR" property="transRcvBankName" />
+    <result column="TRANS_CURRENCY" jdbcType="VARCHAR" property="transCurrency" />
+    <result column="CONFIRM_PAY_DATE" jdbcType="TIMESTAMP" property="confirmPayDate" />
+    <result column="TRANS_CLEAR_DATE" jdbcType="TIMESTAMP" property="transClearDate" />
+    <result column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+    <result column="TRANS_TYPE" jdbcType="VARCHAR" property="transType" />
+    <result column="OTHER_DEPARTMENT_ID" jdbcType="VARCHAR" property="otherDepartmentId" />
+    <result column="DEPARTMENT_ID" jdbcType="VARCHAR" property="departmentId" />
+    <result column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+    <result column="TRANS_RESP_CODE" jdbcType="VARCHAR" property="transRespCode" />
+    <result column="TRANS_ID" jdbcType="VARCHAR" property="transId" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="TRANS_AMT" jdbcType="DECIMAL" property="transAmt" />
+    <result column="TRANS_REMAIN_AMT" jdbcType="DECIMAL" property="transRemainAmt" />
+    <result column="TRANS_REFUND_AMT" jdbcType="DECIMAL" property="transRefundAmt" />
+    <result column="TRANS_FEE_AMT" jdbcType="DECIMAL" property="transFeeAmt" />
+    <result column="TRANS_ACT_RCV_AMT" jdbcType="DECIMAL" property="transActRcvAmt" />
+    <result column="POINT_AMT" jdbcType="DECIMAL" property="pointAmt" />
+    <result column="TRANS_STATUS" jdbcType="VARCHAR" property="transStatus" />
+    <result column="TRANS_STEP" jdbcType="VARCHAR" property="transStep" />
+    <result column="TRANS_PROC_STATUS" jdbcType="VARCHAR" property="transProcStatus" />
+    <result column="OTHER_TRANS_STEP" jdbcType="VARCHAR" property="otherTransStep" />
+    <result column="OTHER_TRANS_STATUS" jdbcType="VARCHAR" property="otherTransStatus" />
+    <result column="BATCH_NO" jdbcType="VARCHAR" property="batchNo" />
+    <result column="TRANS_CORE_SEQ_NO" jdbcType="VARCHAR" property="transCoreSeqNo" />
+    <result column="TRANS_CORE_DATE" jdbcType="TIMESTAMP" property="transCoreDate" />
+    <result column="TRANS_CORE_DATE_TIME" jdbcType="TIMESTAMP" property="transCoreDateTime" />
+    <result column="TRANS_CORE_RESP_CODE" jdbcType="VARCHAR" property="transCoreRespCode" />
+    <result column="TRANS_CORE_RESP_MSG" jdbcType="VARCHAR" property="transCoreRespMsg" />
+    <result column="TRANS_HOST_SEQ_NO" jdbcType="VARCHAR" property="transHostSeqNo" />
+    <result column="TRANS_HOST_DATE" jdbcType="TIMESTAMP" property="transHostDate" />
+    <result column="TRANS_HOST_DATE_TIME" jdbcType="TIMESTAMP" property="transHostDateTime" />
+    <result column="TRANS_HOST_RESP_CODE" jdbcType="VARCHAR" property="transHostRespCode" />
+    <result column="TRANS_HOST_RESP_MSG" jdbcType="VARCHAR" property="transHostRespMsg" />
+    <result column="ORG_TRANS_SEQ_NO" jdbcType="VARCHAR" property="orgTransSeqNo" />
+    <result column="ORG_TRANS_DATE" jdbcType="TIMESTAMP" property="orgTransDate" />
+    <result column="ORG_TRANS_DATE_TIME" jdbcType="TIMESTAMP" property="orgTransDateTime" />
+    <result column="ORG_TRANS_MER_SEQ_NO" jdbcType="VARCHAR" property="orgTransMerSeqNo" />
+    <result column="ORG_TRANS_MER_DATE" jdbcType="TIMESTAMP" property="orgTransMerDate" />
+    <result column="ORG_TRANS_HOST_SEQ_NO" jdbcType="VARCHAR" property="orgTransHostSeqNo" />
+    <result column="ORG_TRANS_HOST_DATE" jdbcType="TIMESTAMP" property="orgTransHostDate" />
+    <result column="ORG_TRANS_HOST_DATE_TIME" jdbcType="TIMESTAMP" property="orgTransHostDateTime" />
+    <result column="SUB_MER_ID" jdbcType="VARCHAR" property="subMerId" />
+    <result column="FUND_CHANNEL" jdbcType="VARCHAR" property="fundChannel" />
+    <result column="BUYER_USER_TYPE" jdbcType="VARCHAR" property="buyerUserType" />
+    <result column="BUYER_LOGON_ID" jdbcType="VARCHAR" property="buyerLogonId" />
+    <result column="MER_WXID" jdbcType="VARCHAR" property="merWxid" />
+    <result column="APPID" jdbcType="VARCHAR" property="appid" />
+    <result column="OPENID" jdbcType="VARCHAR" property="openid" />
+    <result column="AGENT_ID" jdbcType="VARCHAR" property="agentId" />
+    <result column="CASHIER_ID" jdbcType="VARCHAR" property="cashierId" />
+    <result column="CASHIER_NAME" jdbcType="VARCHAR" property="cashierName" />
+    <result column="ISVOICENOTIFIED" jdbcType="VARCHAR" property="isvoicenotified" />
+    <result column="APP_AUTH_TOKEN" jdbcType="VARCHAR" property="appAuthToken" />
+    <result column="TERMINAL_ID" jdbcType="VARCHAR" property="terminalId" />
+    <result column="STORE_NAME" jdbcType="VARCHAR" property="storeName" />
+    <result column="STORE_ID" jdbcType="VARCHAR" property="storeId" />
+    <result column="ACCT_BLANCE" jdbcType="DECIMAL" property="acctBlance" />
+    <result column="ORDER_NO" jdbcType="VARCHAR" property="orderNo" />
+    <result column="SUBJECT" jdbcType="VARCHAR" property="subject" />
+    <result column="BODY" jdbcType="VARCHAR" property="body" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+    <result column="payAmt" jdbcType="VARCHAR" property="payAmt" />
+    <result column="refundAmt" jdbcType="VARCHAR" property="refundAmt" />
+    <result column="totalAmt" jdbcType="VARCHAR" property="totalAmt" />
+  </resultMap>
+  
+  <select id="transQuery" resultMap="BaseResultMap" parameterType="OtTrans">
+  	select t.* from (
+  		select * from ot_trans 
+			union all 
+		select * from ht_trans
+  	)t where 1=1 
+  	<if test="transSeqNo != null and transSeqNo != ''"> AND TRANS_SEQ_NO=#{transSeqNo, jdbcType=VARCHAR}</if>
+  	<if test="transMerSeqNo != null and transMerSeqNo != ''"> AND TRANS_MER_SEQ_NO=#{transMerSeqNo, jdbcType=VARCHAR}</if>
+  	<if test="merId != null and merId != ''"> AND MER_ID=#{merId, jdbcType=VARCHAR}</if>
+  	<if test="accNoTemp != null and accNoTemp != ''"> AND (USER_ACCT_NO=#{accNoTemp, jdbcType=VARCHAR} OR TRANS_RCV_ACCT_NO=#{accNoTemp, jdbcType=VARCHAR})</if>
+  	<if test="beginDate != null and beginDate !='' "> and LEFT(TRANS_DATE_TIME, 10) &gt;= #{beginDate}</if>
+	<if test="endDate != null and endDate !='' "> and LEFT(TRANS_DATE_TIME, 10) &lt;=#{endDate}</if>
+  </select>
+  
+  <select id="getCusCount" resultType="map" parameterType="OtTrans">
+  	SELECT
+	    SUM(
+	        CASE
+	            WHEN trans_type=00
+	            THEN trans_amt
+	            ELSE 0
+	        END) AS payAmt,
+	    SUM(
+	        CASE
+	            WHEN trans_type=01
+	            THEN trans_amt
+	            ELSE 0
+	        END) AS refundAmt,
+	    SUM(
+	        CASE
+	            WHEN trans_type=01
+	            THEN trans_amt
+	            ELSE 0
+	        END)-SUM(
+	        CASE
+	            WHEN trans_type=00
+	            THEN trans_amt
+	            ELSE 0
+	        END) AS totalAmt
+	FROM
+	    (
+	        SELECT
+	            *
+	        FROM
+	            ot_trans
+	        UNION ALL
+	        SELECT
+	            *
+	        FROM
+	            ht_trans) t
+	WHERE
+	    1=1
+	<if test="accNoTemp != null and accNoTemp != ''"> AND (USER_ACCT_NO=#{accNoTemp, jdbcType=VARCHAR} OR TRANS_RCV_ACCT_NO=#{accNoTemp, jdbcType=VARCHAR})</if>
+	<if test="merId != null and merId != ''"> AND MER_ID=#{merId, jdbcType=VARCHAR}</if>
+	<if test="beginDate != null and beginDate !='' "> and LEFT(TRANS_DATE_TIME, 10) &gt;= #{beginDate}</if>
+	<if test="endDate != null and endDate !='' "> and LEFT(TRANS_DATE_TIME, 10) &lt;=#{endDate}</if>
+  </select>
+</mapper>

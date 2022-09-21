@@ -1,0 +1,53 @@
+<style>
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 1rem 2rem;
+    margin-bottom: 1em;
+  }
+}
+.lead button{
+	margin-right: 1em;
+}
+</style>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="container">
+					<div class="jumbotron">
+					  <h4>对账</h4>
+					  <hr class="my-4">
+					  <p class="lead">
+				    	<button type="button" class="btn btn-info btn-lg" onclick="updateStatus(6)">核心对账</button>
+						<button type="button" class="btn btn-info btn-lg" onclick="updateStatus(1)">银联无卡</button>
+						<button type="button" class="btn btn-info btn-lg" onclick="updateStatus(2)">银联二维码</button>
+					  </p>
+					</div>
+					<div class="jumbotron">
+					  <h4>清算</h4>
+					  <hr class="my-4">
+					  <p class="lead">
+					    <button type="button" class="btn btn-info btn-lg">清分</button>
+					  </p>
+					</div>
+					<div class="jumbotron">
+					  <h4>日间更新子订单</h4>
+					  <hr class="my-4">
+					  <p class="lead">
+					    <button type="button" class="btn btn-info btn-lg">更新子订单</button>
+					  </p>
+					</div>
+					<div class="jumbotron">
+					  <h4>智能路由</h4>
+					  <hr class="my-4">
+					  <p class="lead">
+					    <button type="button" class="btn btn-info btn-lg">计算得分</button>
+					    <button type="button" class="btn btn-info btn-lg">计算最优通道</button>
+					  </p>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/uppBatchTask/uppBatchTask.js}"></script>

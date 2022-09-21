@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelRateMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelRate">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="RATE_ID" jdbcType="VARCHAR" property="rateId" />
+    <result column="COMPANY_ID" jdbcType="VARCHAR" property="companyId" />
+    <result column="COMPANY_NAME" jdbcType="VARCHAR" property="companyName" />
+    <result column="RATE_PAYMENT" jdbcType="VARCHAR" property="ratePayment" />
+    <result column="RATE_AMOUNT" jdbcType="DECIMAL" property="rateAmount" />
+    <result column="RATE_UNIT" jdbcType="VARCHAR" property="rateUnit" />
+    <result column="PRICE" jdbcType="VARCHAR" property="price" />
+    <result column="SINGLE_RATE" jdbcType="VARCHAR" property="singleRate" />
+    <result column="ALL_RATE" jdbcType="VARCHAR" property="allRate" />
+    <result column="LADDER_PRICE1" jdbcType="VARCHAR" property="ladderPrice1" />
+    <result column="LADDER_INTERVAL1" jdbcType="VARCHAR" property="ladderInterval1" />
+    <result column="LADDER_PRICE2" jdbcType="VARCHAR" property="ladderPrice2" />
+    <result column="LADDER_INTERVAL2" jdbcType="VARCHAR" property="ladderInterval2" />
+    <result column="LADDER_PRICE3" jdbcType="VARCHAR" property="ladderPrice3" />
+    <result column="LADDER_INTERVAL3" jdbcType="VARCHAR" property="ladderInterval3" />
+    <result column="LADDER_PRICE4" jdbcType="VARCHAR" property="ladderPrice4" />
+    <result column="LADDER_INTERVAL4" jdbcType="VARCHAR" property="ladderInterval4" />
+    <result column="LADDER_PRICE5" jdbcType="VARCHAR" property="ladderPrice5" />
+    <result column="LADDER_INTERVAL5" jdbcType="VARCHAR" property="ladderInterval5" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+  </resultMap>
+</mapper>

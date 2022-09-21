@@ -1,0 +1,383 @@
+<style>
+.row {
+    margin-top: 0; 
+    margin-bottom: 0; 
+}
+</style>
+<div class="modal fade" id="uTransJnl-detail" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="uTransJnl-modal-title">详情</h3>
+            </div>
+            <div class="modal-body">
+				<form id="uTransJnl-detail-form">
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">平台流水号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="seqNo" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">商户号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="merId" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">交易日期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="transDate" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">交易时间：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="transTime" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">交易类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxTp" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">业务类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="bizTp" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联流水：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联时间：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxDtTm" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联日期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxDate" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">结算日期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="settlmtDt" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">收付标志：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="rpFlg" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">币种：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="currency" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">金额：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxAmt" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">收款机构编号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="rcverAcctIssrId" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">收款账户号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="rcverAcctId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">收款账户名称：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="rcverNm" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">证件类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="idTp" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">证件号码：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="idNo" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">手机号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="mobNo" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户等级：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctLvl" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">账户类型：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="acctType" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">核身状态：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="chkStat" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">短信验证码：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="smsKey" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">签约协议号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sgnNo" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联返回码：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sysRtnCd" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联返回描述：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sysRtnDesc" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">银联返回时间：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sysRtnTm" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">交易状态：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="trxStatus" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">发起方机构号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sderIssrId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">发起方账户所属机构号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="sderacctIssrId" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">原交易流水：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="oriTrxId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">原交易日期：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="oriTrxDate" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">客户号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="cifNo" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">机构号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="deptId" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">支付平台签约协议号：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="signId" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留1：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="remark1" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留2：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="remark2" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留3：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="remark3" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留4：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="remark4" />
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 mb-3">
+							<div class="input-group">
+								<span class="input-group-addon">预留5：</span>
+								<div class="form-group">
+									<input type="text" class="form-control" name="remark5" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>

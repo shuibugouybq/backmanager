@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UserPayTypeSignInfoMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UserPayTypeSignInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SIGNNBR" jdbcType="VARCHAR" property="signnbr" />
+    <id column="SIGNTYPCD" jdbcType="CHAR" property="signtypcd" />
+    <result column="SIGNSTATUS" jdbcType="VARCHAR" property="signstatus" />
+    <result column="SIGNNAME" jdbcType="VARCHAR" property="signname" />
+    <result column="USERNBR" jdbcType="VARCHAR" property="usernbr" />
+    <result column="TELLER" jdbcType="VARCHAR" property="teller" />
+    <result column="SIGNMOBILE" jdbcType="VARCHAR" property="signmobile" />
+    <result column="SIGNCARDNBR" jdbcType="VARCHAR" property="signcardnbr" />
+    <result column="SIGNDEPTNBR" jdbcType="VARCHAR" property="signdeptnbr" />
+    <result column="ACCTKINDCD" jdbcType="CHAR" property="acctkindcd" />
+    <result column="PAYTYPCD" jdbcType="CHAR" property="paytypcd" />
+    <result column="SIGNDATE" jdbcType="DATE" property="signdate" />
+    <result column="SIGNEFFDATE" jdbcType="DATE" property="signeffdate" />
+    <result column="SIGNINACTIVEDATE" jdbcType="DATE" property="signinactivedate" />
+    <result column="CHECKDATE" jdbcType="DATE" property="checkdate" />
+    <result column="DATELASTMAINT" jdbcType="TIMESTAMP" property="datelastmaint" />
+    <result column="MEMO" jdbcType="VARCHAR" property="memo" />
+    <result column="SYNSTATUS" jdbcType="CHAR" property="synstatus" />
+  </resultMap>
+</mapper>

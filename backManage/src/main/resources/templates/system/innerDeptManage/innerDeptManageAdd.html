@@ -1,0 +1,154 @@
+<div class="modal fade" id="innerDeptManage-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="innerDeptManage-add-modal-title">添加机构信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="innerDeptManage-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	机构号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="deptnbr" class="form-control">
+                                    <!-- <input type="hidden" name="oldChannelId" class="form-control"> -->
+                                    <!-- <input type="hidden" name="deptId" class="form-control"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	机构名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="deptname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	机构级别：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="deptlevel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	上级机构：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="superdeptnbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	打开日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="opendate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	打开人员编号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="openusernbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	关闭日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="closedate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	关闭人员编号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="closeusernbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	修改日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="modifydate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	修改人编号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="modifyusernbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	机构状态：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="deptstatus" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="innerDeptManage-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/innerDeptManage/innerDeptManageAdd.js}"></script>

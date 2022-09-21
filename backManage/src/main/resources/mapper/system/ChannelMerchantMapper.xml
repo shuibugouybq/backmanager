@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelMerchantMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelMerchant">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <id column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+    <result column="MER_STATUS" jdbcType="VARCHAR" property="merStatus" />
+    <result column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <result column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+  </resultMap>
+</mapper>

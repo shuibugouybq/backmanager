@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面 | 互联网支付管理系统</title>
+    <meta name="description" content="后台管理系统">
+    <link th:href="@{css/Login/login.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{css/Login/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/Login/nifty.min.css}" rel="stylesheet">
+    <link th:href="@{css/Login/nifty-demo-icons.min.css}" rel="stylesheet">
+    <link th:href="@{css/Login/nifty-demo.min.css}" rel="stylesheet">
+    <link th:href="@{css/Login/magic-check.min.css}" rel="stylesheet">
+    <link th:href="@{css/Login/pace.min.css}" rel="stylesheet">
+    <script th:src="@{css/Login/pace.min.js}"></script>
+    <script th:src="@{js/jquery.min.js}"></script>
+    <script th:src="@{css/Login/bootstrap.min.js}"></script>
+    <script th:src="@{css/Login/nifty.min.js}"></script>
+    <script th:src="@{css/Login/bg-images.js}"></script>
+</head>
+<body class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div id="container" class="cls-container">
+        <div id="bg-overlay" class="bg-img">
+        </div>
+        <div class="cls-title">
+        	<img data-th-src="@{img/logo.gif}" title="点击更换！">
+        	互联网支付管理系统
+        </div>
+        <div class="cls-content">
+            <div class="cls-content-sm panel one">
+                <div class="panel-body">
+                    <div class="mar-ver pad-btm">
+                        <h4>
+                            	账密登录</h4>
+                    </div>
+                    <form action="http://www.niftyadmin.cn/index.html">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username" autofocus="" name="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+                    </div>
+                    <div class="checkbox pad-btm text-left">
+                        <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox" name="rememberme">
+                        <label for="demo-form-checkbox">
+                            	记住我</label>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" id="loginButton" onclick="login()">
+                        	登录</button>
+                    </form>
+                </div>
+                <div class="pad-all">
+                    <a href="#" class="btn-link mar-rgt">忘记密码 ?</a>
+                    <a href="#" class="btn-link mar-lft">用户注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script th:inline="javascript">
+	var ctx = [[@{/}]];
+</script>
+<script data-th-src="@{js/app/login.js}"></script>
+</html>

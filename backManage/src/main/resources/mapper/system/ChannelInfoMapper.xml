@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelInfoMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <id column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+    <result column="PARENT_CHANNEL_ID" jdbcType="VARCHAR" property="parentChannelId" />
+    <result column="CHANNEL_STATUS" jdbcType="VARCHAR" property="channelStatus" />
+    <result column="CHANNEL_NAME" jdbcType="VARCHAR" property="channelName" />
+    <result column="CHANNEL_DESC" jdbcType="VARCHAR" property="channelDesc" />
+    <result column="CHANNEL_IP_LIST" jdbcType="VARCHAR" property="channelIpList" />
+    <result column="CHANNEL_OPEN_DATE" jdbcType="VARCHAR" property="channelOpenDate" />
+    <result column="CHANNEL_OPEN_USER" jdbcType="VARCHAR" property="channelOpenUser" />
+    <result column="CHANNEL_CLOSE_DATE" jdbcType="VARCHAR" property="channelCloseDate" />
+    <result column="CHANNEL_CLOSE_USER" jdbcType="VARCHAR" property="channelCloseUser" />
+    <result column="CHANNEL_MODIFY_DATE" jdbcType="VARCHAR" property="channelModifyDate" />
+    <result column="CHANNEL_MODIFY_USER" jdbcType="VARCHAR" property="channelModifyUser" />
+    <result column="CHANNEL_ARR_DATE" jdbcType="VARCHAR" property="channelArrDate" />
+    <result column="SETTLE_TIME" jdbcType="VARCHAR" property="settleTime" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="container">
+				  <div class="row justify-content-md-center">
+				    <div class="col-md-auto">
+				      <form class="merQrcode-table-form">
+				      	<div class="input-group">
+							<span class="input-group-addon">
+								商户编号：
+							</span>
+		                   <div class="form-group">
+		                       <input type="text" name="merId" class="form-control">
+		                       <i class="form-group__bar"></i>
+		                   </div>
+               			</div>
+				      </form>
+				    </div>
+				    <div class="col col-lg-2">
+				      <div class="dataTables_buttons hidden-sm-down actions">
+	                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+	                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+	                </div>
+				    </div>
+				  </div>
+				  <div class="row justify-content-md-center">
+				  	<div class="col-md-auto">
+	                	<img id="merQRImg" alt="" src="">
+	                </div>
+	                </div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/merQrcode/merQrcode.js}"></script>

@@ -1,0 +1,92 @@
+<div class="modal fade" id="param-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="param-add-modal-title">添加通道支持银行信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="param-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	版本号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="version" class="form-control" value="v0.0.1">
+                                    <input type="hidden" name="id" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	字典名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="parentParmaId" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	类型：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="paramType" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	参数ID：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="paramId" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	参数值：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="paramValue" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	参数名：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="paramName" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="param-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/param/paramAdd.js}"></script>

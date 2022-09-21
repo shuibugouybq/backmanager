@@ -1,0 +1,608 @@
+<div class="modal fade" id="merchant-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="merchant-add-modal-title">商户录入页</h3>
+            </div>
+            <div class="modal-body">
+                <form id="merchant-add-form">
+                	<div class="row">
+                    	<div class="col-sm-12">
+                    		<h5 class="text-center ">商户基本信息</h5>
+                    	</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 客户号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merCifno" class="form-control">
+                                    <input type="hidden" name="merId" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户开业时间：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merBusinessopendate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户工商注册名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merName" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户简称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merBriefname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户注册资本：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merRegcapital" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户性质：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merProperty" class="form-control">
+										 <option value="01">国营</option>
+										 <option value="02">集体</option>
+										 <option value="03">私营</option>
+										 <option value="04">合资</option>
+										 <option value="05">股份制</option>
+										 <option value="06">其他</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户营业执照：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merBusinesslicenseid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 税务登记号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTaxregid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户办公地址：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merAddr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户后台通知地址：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merRepurl" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 法人代表：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merCorporationname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 证件名称：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merCorporationPaperType" id="merCorporationpapertype" class="form-control">
+										 <option value="01">第一代居民身份证</option> <option value="02">第二代居民身份证</option> <option value="03">临时身份证</option> <option value="04">中国护照</option> <option value="05">户口簿</option> <option value="06">村民委员证明</option> <option value="07">学生证</option> <option value="08">军官证</option> <option value="09">离休干部荣誉证</option> <option value="10">军官退休证</option> <option value="11">文职干部退休证</option> <option value="12">军事学员学员证</option> <option value="13">警官证(包武警证)</option> <option value="14">士兵证</option> <option value="15">香港通行证</option> <option value="16">澳门通行证</option> <option value="17">台湾通行证或有效旅行证件</option> <option value="18">外国人永久居留证</option> <option value="19">边民出入境通行证</option> <option value="20">外国护照</option> <option value="21">其它</option> <option value="22">香港身份证</option> <option value="23">澳门身份证</option> <option value="24">台湾身份证</option> <option value="30">组织机构代码</option> <option value="31">登记注册证</option> <option value="32">国税登记证 </option> <option value="33">地税登记证</option> <option value="34">开户许可证</option> <option value="35">外汇许可证</option> <option value="36">贷款卡号</option> <option value="37">机构信用代码证</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 证件号码：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merCorporationpaperid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 网站名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSitename" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 网站域名：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merDomain" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 网站IP地址和端口：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSiteiport" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 ICP许可证号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSitecode" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 是否有虚拟物品：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merIfvirtrualgoods" class="form-control">
+										 <option value="1">无</option>
+										 <option value="0">有</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 网站经营内容：
+					            </span>
+                                <div class="form-group">
+                                    <label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="01">数码家电
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="02">百货商城
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="03">航空售票
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="04">服装服饰
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="05">箱包配饰
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="06">美容化妆
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="07">母婴用品
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="08">食品
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="09">药品
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="10">图书音像
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="11">家居建材
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="12">汽车用品
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="13">运动户外
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="14">生活服务
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="15">团购
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="16">珠宝首饰
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="17">金融支付
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="18">虚拟商品
+									</label>
+									<label class="checkbox-inline">
+									  <input type="checkbox" name="merWorkscop" value="19">其他
+									</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 特种经营许可证：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSpeciallicense" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 许可证号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merLicenese" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-12">
+                    		<h5 class="text-center ">商户拓展信息</h5>
+                    	</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 业务联系人：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merLinkmanname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 移动电话：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merLinkmanphone" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 办公电话：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merLinkmantel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 电子邮箱：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merLinkmanemail" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 技术联系人：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTechlinkname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 移动电话：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTechlinkmanphone" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 办公电话：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTechlinkmantel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 电子邮箱：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTechlinkmanemail" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户传真号码：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merFax" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 结算账户号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSettacctno" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户结算账户名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merSettacctname" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 开户行机构号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merOpendeptid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 发展行机构号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merDevelopdeptid" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-12">
+                    		<h5 class="text-center ">审批信息</h5>
+                    	</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户状态：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merStatus" class="form-control">
+										 <option value="0">正常</option> <option value="1">冻结</option> <option value="2">销户</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户等级：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merLevel" class="form-control">
+							    		<option value="">-请选择-</option>
+										 <option value="01">A类</option> <option value="02">B类</option> <option value="03">C类</option> <option value="04">D类</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 商户服务类型：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merServicetype" class="form-control">
+										 <option value="2">B2B商户</option> <option value="1">B2C商户</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 开通支付类型：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merTranstype" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 结算周期：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merSettperiod" class="form-control">
+										 <option value="1">日</option> <option value="2">周</option> <option value="4">月</option> <option value="5">季</option> <option value="6">半年</option> <option value="7">年</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 结算方式：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merSettmode" class="form-control" onchange="getFeeInfo(this.value);">
+										 <option value="2">差额结算</option> <option value="1">全额结算</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 结算类型：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merSettaccttype" class="form-control">
+										 <option value="01">门户</option> <option value="02">商户</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 手续费收取方式：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merFeemode" class="form-control" onchange="selectMerFee(this.value);">
+										 <option value="1">定额</option> <option value="2">交易金额百分比</option> <option value="3">包月</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 手续费金额：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="merFeeamt" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 手续费结算周期：
+					            </span>
+                                <div class="form-group">
+                                    <select name="merFeesettperiod" class="form-control">
+										 <option value="1">日</option> <option value="2">周</option> <option value="4">月</option> <option value="5">季</option> <option value="6">半年</option> <option value="7">年</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="merchant-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/merchant/merchantAdd.js}"></script>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.SubOrderMapper">
+   <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.SubOrder">
+    <result column="PARENT_MERCHANT_ID" jdbcType="VARCHAR" property="parentMerchantId" />
+    <result column="ORDER_NO" jdbcType="VARCHAR" property="orderNo" />
+    <result column="TRANS_SEQ_NO" jdbcType="VARCHAR" property="transSeqNo" />
+    <result column="PAYER_DEPARTMENT_ID" jdbcType="VARCHAR" property="payerDepartmentId" />
+    <result column="PAYEE_DEPARTMENT_ID" jdbcType="VARCHAR" property="payeeDepartmentId" />
+    <result column="TRANS_STATUS" jdbcType="VARCHAR" property="transStatus" />
+    <result column="ORDER_DATE" jdbcType="VARCHAR" property="orderDate" />
+    <result column="TRANS_AMT" jdbcType="VARCHAR" property="transAmt" />
+  </resultMap>
+  
+  <select id="listQuery" resultMap="BaseResultMap" parameterType="SubOrder">
+  	select PARENT_MERCHANT_ID,ORDER_NO,TRANS_SEQ_NO,PAYER_DEPARTMENT_ID,PAYEE_DEPARTMENT_ID,
+  	TRANS_STATUS,ORDER_DATE,TRANS_AMT
+  	 from ot_order WHERE 1=1
+	<if test="parentMerchantId != null and parentMerchantId != ''"> AND PARENT_MERCHANT_ID=#{parentMerchantId, jdbcType=VARCHAR}</if>
+	<if test="orderNo != null and orderNo != ''"> AND ORDER_NO=#{orderNo, jdbcType=VARCHAR}</if>
+	<if test="transSeqNo != null and transSeqNo != ''"> AND TRANS_SEQ_NO=#{transSeqNo, jdbcType=VARCHAR}</if>
+	<if test="startOrderDate != null and startOrderDate != ''"> AND ORDER_DATE &gt;=#{startOrderDate, jdbcType=VARCHAR}</if>
+	<if test="endOrderDate != null and endOrderDate != ''"> AND ORDER_DATE &lt;=#{endOrderDate, jdbcType=VARCHAR}</if>
+	union all 
+	select PARENT_MERCHANT_ID,ORDER_NO,TRANS_SEQ_NO,PAYER_DEPARTMENT_ID,PAYEE_DEPARTMENT_ID,
+  	TRANS_STATUS,ORDER_DATE,TRANS_AMT
+  	 from ht_order WHERE 1=1
+	<if test="parentMerchantId != null and parentMerchantId != ''"> AND PARENT_MERCHANT_ID=#{parentMerchantId, jdbcType=VARCHAR}</if>
+	<if test="orderNo != null and orderNo != ''"> AND ORDER_NO=#{orderNo, jdbcType=VARCHAR}</if>
+	<if test="transSeqNo != null and transSeqNo != ''"> AND TRANS_SEQ_NO=#{transSeqNo, jdbcType=VARCHAR}</if>
+	<if test="startOrderDate != null and startOrderDate != ''"> AND ORDER_DATE &gt;=#{startOrderDate, jdbcType=VARCHAR}</if>
+	<if test="endOrderDate != null and endOrderDate != ''"> AND ORDER_DATE &lt;=#{endOrderDate, jdbcType=VARCHAR}</if>
+  </select>
+  
+  
+</mapper>

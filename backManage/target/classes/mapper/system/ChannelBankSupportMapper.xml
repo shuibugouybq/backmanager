@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.ChannelBankSupportMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.ChannelBankSupport">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CHANNEL_ID" jdbcType="VARCHAR" property="channelId" />
+    <id column="CHANNEL_TYPE" jdbcType="VARCHAR" property="channelType" />
+    <id column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+    <result column="CNAPS" jdbcType="VARCHAR" property="cnaps" />
+    <result column="CARD_TYPE_SUPPORTED" jdbcType="VARCHAR" property="cardTypeSupported" />
+    <result column="DAY_LIMIT" jdbcType="DECIMAL" property="dayLimit" />
+    <result column="PER_LIMIT" jdbcType="DECIMAL" property="perLimit" />
+    <result column="YEAR_LIMIT" jdbcType="DECIMAL" property="yearLimit" />
+    <result column="OPEN_FLAG" jdbcType="VARCHAR" property="openFlag" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+    <result column="REMARK4" jdbcType="VARCHAR" property="remark4" />
+    <result column="REMARK5" jdbcType="VARCHAR" property="remark5" />
+  </resultMap>
+</mapper>

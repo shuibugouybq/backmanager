@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.DetpTransCtrlMapper">
+   <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.DetpTransCtrl">
+    <result column="DEPTNBR" jdbcType="VARCHAR" property="deptnbr" />
+    <result column="PAYTYPDESC" jdbcType="VARCHAR" property="payTypeDesc" />
+    <result column="CHANNELDESC" jdbcType="VARCHAR" property="channelDesc" />
+    <result column="PERTRANSLIMIT" jdbcType="VARCHAR" property="pertranslimit" />
+    <result column="PERDAYLIMIT" jdbcType="VARCHAR" property="perdaylimit" />
+    <result column="DAYAMTDATE" jdbcType="VARCHAR" property="dayamtdate" />
+    <result column="DAYAMT" jdbcType="VARCHAR" property="dayamt" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="PAYTYPCD" jdbcType="VARCHAR" property="payTypeCd" />
+    <result column="CHANNELNBR" jdbcType="VARCHAR" property="channelNBR" />
+  </resultMap>
+  
+  <select id="listQuery" resultMap="BaseResultMap" parameterType="DetpTransCtrl">
+  select 
+  DEPTNBR,PAYTYPDESC,CHANNELDESC,PERTRANSLIMIT,PERDAYLIMIT,DAYAMTDATE,DAYAMT,b.STATUS,
+  b.PAYTYPCD,b.CHANNELNBR
+  from pay_type a,dept_trans_ctrl b,channelinfo c
+  where a.PAYTYPCD=b.PAYTYPCD and b.CHANNELNBR = c.CHANNELNBR
+  <if test="deptnbr != null and deptnbr != ''"> AND b.DEPTNBR=#{deptnbr, jdbcType=VARCHAR}</if>
+  <if test="payTypeDesc != null and payTypeDesc != ''"> AND a.PAYTYPDESC=#{payTypeDesc, jdbcType=VARCHAR}</if>
+  </select>
+  
+  <select id="findById" resultMap="BaseResultMap" parameterType="DetpTransCtrl">
+  select 
+  DEPTNBR,PERTRANSLIMIT,PERDAYLIMIT,DAYAMTDATE,DAYAMT,STATUS,PAYTYPCD,CHANNELNBR
+  from dept_trans_ctrl
+  where 
+  DEPTNBR=#{deptnbr, jdbcType=VARCHAR} and
+  PAYTYPCD=#{payTypeCd, jdbcType=VARCHAR} and 
+  CHANNELNBR=#{channelNBR, jdbcType=VARCHAR}
+  </select>
+  
+  <delete id="deleteDetpTransCtrl" parameterType="DetpTransCtrl">
+  delete from dept_trans_ctrl where 
+  DEPTNBR=#{deptnbr, jdbcType=VARCHAR} and
+  PAYTYPCD=#{payTypeCd, jdbcType=VARCHAR} and 
+  CHANNELNBR=#{channelNBR, jdbcType=VARCHAR}
+  </delete>
+  
+  <insert id="insertDetpTransCtrl" parameterType="DetpTransCtrl">
+  insert into dept_trans_ctrl(DEPTNBR,PAYTYPCD,CHANNELNBR
+  <if test="pertranslimit != null and pertranslimit != ''"> ,pertranslimit </if>
+  <if test="perdaylimit != null and perdaylimit != ''"> ,perdaylimit </if>
+  <if test="dayamtdate != null and dayamtdate != ''"> ,dayamtdate </if>
+  <if test="dayamt != null and dayamt != ''"> ,dayamt </if>
+  <if test="status != null and status != ''"> ,status </if>
+  ) values (#{deptnbr, jdbcType=VARCHAR},#{payTypeCd, jdbcType=VARCHAR},#{channelNBR, jdbcType=VARCHAR}
+  <if test="pertranslimit != null and pertranslimit != ''"> , #{pertranslimit, jdbcType=VARCHAR}</if>
+  <if test="perdaylimit != null and perdaylimit != ''"> , #{perdaylimit, jdbcType=VARCHAR}</if>
+  <if test="dayamtdate != null and dayamtdate != ''"> , #{dayamtdate, jdbcType=VARCHAR}</if>
+  <if test="dayamt != null and dayamt != ''"> , #{dayamt, jdbcType=VARCHAR}</if>
+  <if test="status != null and status != ''"> , #{status, jdbcType=VARCHAR}</if>
+  )
+  </insert>
+  
+  <update id="updateDetpTransCtrl" parameterType="DetpTransCtrl">
+  update dept_trans_ctrl set 
+  <choose>
+  <when test="pertranslimit != null and pertranslimit != ''">pertranslimit=#{pertranslimit, jdbcType=VARCHAR},</when>
+  <otherwise>pertranslimit= null ,</otherwise>
+  </choose>
+  <choose>
+  <when test="perdaylimit != null and perdaylimit != ''">perdaylimit=#{perdaylimit, jdbcType=VARCHAR},</when>
+  <otherwise>perdaylimit= null ,</otherwise>
+  </choose>
+  <choose>
+  <when test="dayamtdate != null and dayamtdate != ''">dayamtdate=#{dayamtdate, jdbcType=VARCHAR},</when>
+  <otherwise>dayamtdate= null ,</otherwise>
+  </choose>
+  <choose>
+  <when test="dayamt != null and dayamt != ''">dayamt=#{dayamt, jdbcType=VARCHAR},</when>
+  <otherwise>dayamt= null ,</otherwise>
+  </choose>
+  status=#{status, jdbcType=VARCHAR}
+  where 
+  DEPTNBR=#{deptnbr, jdbcType=VARCHAR} and
+  PAYTYPCD=#{payTypeCd, jdbcType=VARCHAR} and 
+  CHANNELNBR=#{channelNBR, jdbcType=VARCHAR}
+  </update>
+  
+</mapper>

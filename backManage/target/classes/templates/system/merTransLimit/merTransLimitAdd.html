@@ -1,0 +1,127 @@
+<div class="modal fade" id="merTransLimit-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="merTransLimit-add-modal-title">添加商户交易控制</h3>
+            </div>
+            <div class="modal-body">
+                <form id="merTransLimit-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	商户号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="mernbr" id="mernbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	支付产品：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="paytypcd" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	卡类型：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="cardtypcd" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	交易类型：
+					            </span>
+                                <div class="form-group">
+                                     <input type="text" name="transtypcd"  class="form-control">
+                                        <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	渠道号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="channelnbr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	商户状态：
+					            </span>
+                                <div class="form-group">
+                                	 <select name="status" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="0">关闭</option>
+										 <option value="1">开通</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rowl">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	商户限额：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="pertranslimit" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	卡对应借贷标识：
+					            </span>
+                                <div class="form-group">
+                                    <select name="cardType" class="form-control">
+										 <option value="">请选择</option>
+										 <option value="1">借记卡</option>
+										 <option value="2">贷记卡</option>
+										 <option value="3">准贷记卡</option>
+										 <option value="4">预付费卡</option>
+									</select>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="merTransLimit-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/merTransLimit/merTransLimitAdd.js}"></script>
+<script data-th-src="@{js/app/system/merTransLimit/merTransLimitEdit.js}"></script>

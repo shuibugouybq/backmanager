@@ -1,0 +1,63 @@
+<div data-th-include="system/param/paramAdd"></div>
+<div class="card">
+    <div class="card-block">
+        <div class="table-responsive">
+            <div id="data-table_wrapper" class="dataTables_wrapper">
+                <div class="dataTables_buttons hidden-sm-down actions">
+                    <span class="actions__item zmdi zmdi-search" onclick="search()" title="搜索" />
+                    <span class="actions__item zmdi zmdi-refresh-alt" onclick="refresh()" title="刷新" />
+                    <div class="dropdown actions__item" shiro:hasAnyPermissions="param:add,param:delete,param:update">
+                        <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#param-add" shiro:hasPermission="param:add">新增</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateParam()" shiro:hasPermission="param:update">修改</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteParams();" shiro:hasPermission="param:delete">删除</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data-table_filter" class="dataTables_filter">
+                    <form class="param-table-form">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	字典名称：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="parentParmaId" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	参数值：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="paramValue" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+					               	参数名：
+					            </span>
+                                    <div class="form-group">
+                                        <input type="text" name="paramName" class="form-control">
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <table id="paramTable" data-mobile-responsive="true" class="mb-bootstrap-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/system/param/param.js}"></script>
+<script data-th-src="@{js/app/system/param/paramEdit.js}"></script>

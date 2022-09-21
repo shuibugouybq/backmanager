@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.MerRiskLevelMapper">
+   <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.MerRiskLevel">
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="MER_BUSINESSLICENSEID" jdbcType="VARCHAR" property="merBusinessLicenseId" />
+    <result column="MER_CORPORATIONNAME" jdbcType="VARCHAR" property="merCorporationName" />
+    <result column="MER_CORPORATIONPAPERID" jdbcType="VARCHAR" property="merCorporationPaperId" />
+    <result column="warndatetime" jdbcType="VARCHAR" property="warndatetime" />
+    <result column="warndealman" jdbcType="VARCHAR" property="warndealman" />
+    <result column="merdealresult" jdbcType="VARCHAR" property="merdealresult" />
+    <result column="rislevel" jdbcType="VARCHAR" property="rislevel" />
+  </resultMap>
+  
+  <select id="listQuery" resultMap="BaseResultMap" parameterType="MerRiskLevel">
+  	select * from mer_warn_info a , ft_merchant b where a.merid = b.MER_ID
+  	<if test="rislevel != null and rislevel != ''"> AND rislevel=#{rislevel, jdbcType=VARCHAR}</if>
+  	
+  </select>
+  
+  
+</mapper>

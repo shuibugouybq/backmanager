@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.UppBatchProcessMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.UppBatchProcess">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="DEPARTMENT_ID" jdbcType="VARCHAR" property="departmentId" />
+    <id column="SHARDING_KEY" jdbcType="DECIMAL" property="shardingKey" />
+    <result column="BP_STATUS" jdbcType="CHAR" property="bpStatus" />
+    <result column="GMT_CREATE" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="GMT_MODIFIED" jdbcType="TIMESTAMP" property="gmtModified" />
+  </resultMap>
+</mapper>

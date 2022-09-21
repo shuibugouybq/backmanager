@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.system.dao.CardBinMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.system.domain.CardBin">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="BANK_ID" jdbcType="VARCHAR" property="bankId" />
+    <id column="CARD_BIN" jdbcType="VARCHAR" property="cardBin" />
+    <result column="CARD_NAME" jdbcType="VARCHAR" property="cardName" />
+    <result column="CARD_TYPE" jdbcType="VARCHAR" property="cardType" />
+    <result column="CARD_LENGTH" jdbcType="VARCHAR" property="cardLength" />
+    <result column="BIN_LENGTH" jdbcType="VARCHAR" property="binLength" />
+    <result column="BANK_NAME" jdbcType="VARCHAR" property="bankName" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="REMARK1" jdbcType="VARCHAR" property="remark1" />
+    <result column="REMARK2" jdbcType="VARCHAR" property="remark2" />
+    <result column="REMARK3" jdbcType="VARCHAR" property="remark3" />
+  </resultMap>
+</mapper>
